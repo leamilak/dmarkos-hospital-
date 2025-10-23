@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debre Markos General Hospital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f9fc;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(-45deg, #0073b7, #003366, #0073b7, #005f9e);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+      padding: 15px 0;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1588776814546-bcdbf8a1397d') center/cover no-repeat;
+      padding: 80px 0;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #0073b7;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #005f9e;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #0073b7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .form-section {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+      margin: 0 auto;
+      display: none;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    form button {
+      padding: 12px 20px;
+      background-color: #0073b7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #005f9e;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container, .cards {
+        width: 95%;
+      }
+      .hero h2 {
+        font-size: 28px;
+      }
+      nav a {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Debre Markos General Hospital</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Book Appointment</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="position: relative; overflow: hidden; background-image: url('https://www.nyp.org/sites/default/files/acquiadam/2025-03/2024-Homepage-Hero-Desktop-V11.webp'); background-size: cover; background-position: center; color: white;">
+  <div class="container" style="padding: 100px 20px; text-align: center; background-color: rgba(0, 0, 0, 0.5);">
+    <h2 style="font-size: 2em; font-weight: bold;">
+      Building a Healthy Community One Patient at a Time.
+    </h2>
+    <p style="margin-top: 10px;">
+      Debre Markos General Hospital now has the option for new and existing patients to schedule appointments online.
+    </p>
+    <p>Serving East Gojjam since 1890 E.C. with excellence in health services.</p>
+    <a href="#" id="showBookForm" class="btn" 
+       style="margin-top: 20px; display: inline-block; background-color: #007BFF; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+      Book an Appointment
+    </a>
+  </div>
+</section>
+
+
+
+<section id="book" class="form-section">
+  <h2>Book an Appointment</h2>
+  <form onsubmit="return validateForm()">
+    <input type="text" id="patientName" placeholder="Full Name" required />
+    <input type="email" id="patientEmail" placeholder="Email Address" required />
+    <input type="tel" id="patientPhone" placeholder="Phone Number" required />
+<label for="doctor">Choose a Doctor:</label>
+<select id="doctor" name="doctor" required>
+  <option value="" disabled selected>-- Select Doctor --</option>
+  <option value="Dr. Getahun Ayele">Dr. Getahun Ayele – Cardiologist</option>
+  <option value="Dr. Hana Mekonnen">Dr. Hana Mekonnen – Pediatrician</option>
+  <option value="Dr. Tesfaye Belay">Dr. Tesfaye Belay – General Surgeon</option>
+  <option value="Dr. Selam Abate">Dr. Selam Abate – Gynecologist</option>
+</select>
+
+
+    <textarea id="message" rows="4" placeholder="Brief description of your health issue..." required></textarea>
+    <button type="submit">Submit Booking</button>
+  </form>
+</section>
+
+<section class="services fade-in">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1664475808936-a5b56a8c3b58?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8b3V0cGF0aWVudCUyMGNhcmV8ZW58MHx8MHx8fDA%3D" alt="Outpatient Care">
+      <h3>Outpatient Care</h3>
+      <p>Expert diagnosis and quick treatment across various departments.</p>
+    </div>
+      <div class="card">
+    <img src="https://images.unsplash.com/photo-1619025873875-59dfdd2bbbd6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW1idWxhbmNlfGVufDB8fDB8fHww" alt="Ambulance Support">
+    <h3>Ambulance Support</h3>
+    <p>Fast and reliable emergency transport for critical patients.</p>
+  </div>
+      <div class="card">
+    <img src="https://media.istockphoto.com/id/2186245971/photo/senior-female-patient-stay-in-hospital-as-inpatient.webp?a=1&b=1&s=612x612&w=0&k=20&c=zM4NW-86Ex1VITET5R_J4o3dkF50yRkDLHn4ApNyuz0=" alt="Inpatient Care">
+    <h3>Inpatient Care</h3>
+    <p>Comfortable rooms and continuous care for admitted patients.</p>
+  </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9zcGl0YWx8ZW58MHx8MHx8fDA%3D" alt="Emergency Room">
+      <h3>Emergency Room</h3>
+      <p>24/7 emergency services with trained staff and equipment.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1576091358783-a212ec293ff3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBoYXJtYWN5fGVufDB8fDB8fHww" alt="Pharmacy">
+      <h3>Pharmacy</h3>
+      <p>On-site pharmacy with access to essential and prescribed drugs.</p>
+    </div>
+    <div class="card">
+      <img src="https://www.berlin-health-excellence.com/sites/default/files/styles/765x393/public/2017-02/Forschung_GettyImages-500536318_c_GettyImages_Foto_sanjeri_4.jpg?h=d1edf523&itok=DdtR4SM4" alt="Laboratory">
+      <h3>Laboratory</h3>
+      <p>Advanced diagnostic lab services with accurate test results.</p>
+    </div>
+  </div>
+</section>
+
+<section class="departments">
+  <h2>Hospital Departments</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1599045118108-bf9954418b76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyZGlvbG9neXxlbnwwfHwwfHx8MA%3D%3D">
+      <h3>Cardiology</h3>
+      <p>Heart-related care, diagnostics, and treatment by expert cardiologists.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1632052998134-ee83afa9cced?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBlZGlhdHJpY3N8ZW58MHx8MHx8fDA%3D">
+      <h3>Pediatrics</h3>
+      <p>Comprehensive healthcare for children, from newborns to teens.</p>
+    </div>
+    <div class="card">
+            <img src="https://www.berlin-health-excellence.com/sites/default/files/styles/450x176/public/2022-09/Rosa%20Helios.jpg?h=3c06853f&itok=JIDg4jpO">
+
+      <h3>General Surgery</h3>
+      <p>Surgical operations performed with modern tools and sterile facilities.</p>
+    </div>
+    
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1479641290/photo/physiotherapist-working-with-patient.webp?a=1&b=1&s=612x612&w=0&k=20&c=yZ0hKF9UTvyu6eJa6pNaKp7UwD9xy23QXIufZ8GaCFM=" alt="Physical Therapy" style="width:100%; border-radius:12px;">
+    <h3>Physical Therapy</h3>
+    <p>Rehabilitation services to improve mobility and manage pain.</p>
+  </div>
+      <div class="card">
+    <img src="https://plus.unsplash.com/premium_photo-1664303506610-f80b16db0c3d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFkaW9sb2d5fGVufDB8fDB8fHww" alt="Radiology" style="width:100%; border-radius:12px;">
+    <h3>Radiology</h3>
+    <p>Accurate imaging diagnostics including X-ray, CT, and ultrasound scans.</p>
+  </div>
+    <div class="card">
+      <img src="https://plus.unsplash.com/premium_photo-1677604598527-64755d1a60ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2d5bmVjb2xvZ3l8ZW58MHx8MHx8fDA%3D">
+      <h3>Gynecology</h3>
+      <p>Women’s reproductive health including pregnancy and childbirth.</p>
+    </div>
+  </div>
+</section>
+
+<section style="text-align: center; padding: 40px; background-color: #e6f2ff;">
+  <h2 style="color: #0013b7;">Need Urgent Help?</h2>
+  <p>Call our 24/7 emergency number or book online instantly.</p>
+  <a href="#" class="btn" onclick="document.getElementById('book').style.display='block'; document.getElementById('book').scrollIntoView({behavior:'smooth'})">Book Now</a>
+  <a href="#ambulanceFormSection" class="btn" onclick="document.getElementById('ambulanceFormSection').style.display='block';">Request Ambulance</a>
+</section>
+
+<div class="container">
+  <button id="toggleAmbulanceForm" class="btn">Ambulance Support</button>
+
+  <section id="ambulanceFormSection" class="form-section">
+    <h2>Ambulance Request Form</h2>
+    <form id="ambulanceForm">
+      <input type="text" id="ambName" name="ambName" placeholder="Full Name" required />
+      <input type="tel" id="ambPhone" name="ambPhone" placeholder="Phone Number" pattern="[0-9+]{9,15}" required />
+      <input type="text" id="ambKebele" name="ambKebele" placeholder="Kebele" required />
+      <input type="text" id="ambSefer" name="ambSefer" placeholder="Sefer (Neighborhood)" required />
+      <textarea id="ambLocation" name="ambLocation" rows="3" placeholder="Current Location Details" required></textarea>
+      <button type="submit" class="submit-btn">Request Ambulance</button>
+    </form>
+  </section>
+</div>
+<section id="team" class="section">
+  <h2>Our Highly Skilled Medical Team</h2>
+  <div class="cards" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+  
+    <div class="card" style="width:200px; text-align:center;">
+      <img src="https://images.pexels.com/photos/7578806/pexels-photo-7578806.jpeg?auto=format&fit=crop&w=800&q=80" alt="Dr. Saba Tadesse" style="width:100%; border-radius:12px;">
+      <h3>Dr. Saba Tadesse</h3>
+      <p>Consultant Pediatrician dedicated to child health and wellness.</p>
+    </div>
+
+    <div class="card" style="width:200px; text-align:center;">
+      <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=format&fit=crop&w=800&q=80" alt="Dr. Henok Asfaw" style="width:100%; border-radius:12px;">
+      <h3>Dr. Saron Asfaw</h3>
+      <p>Orthopedic Surgeon focused on bone and joint care.</p>
+    </div>
+  <div class="card" style="width:200px; text-align:center;">
+    <img src="https://plus.unsplash.com/premium_photo-1664475543697-229156438e1e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZG9jdG9ycGhvdG98ZW58MHx8MHx8fDA%3D" alt="Dr. Hana Mekonnen" style="width:100%; border-radius:12px;">
+    <h3>Dr. Hana Mekonnen</h3>
+    <p>Pediatrician providing expert care for children and infants.</p>
+  </div>
+
+  <div class="card" style="width:200px; text-align:center;">
+    <img src="https://plus.unsplash.com/premium_photo-1661578535048-7a30e3a71d25?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZG9jdG9ycGhvdG98ZW58MHx8MHx8fDA%3D" alt="Dr. Selam Abate" style="width:100%; border-radius:12px;">
+    <h3>Dr. leamilak Silitanu</h3>
+    <p>Gynecologist with a focus on women’s reproductive health.</p>
+  </div>
+    <div class="card" style="width: 200px; text-align: center;">
+      <img src="https://images.pexels.com/photos/15752232/pexels-photo-15752232.jpeg?auto=format&fit=crop&w=800&q=80" alt="Dr. Mekdes Alemu" style="width: 100%; border-radius: 12px;">
+      <h3>Dr. Mekdes Alemu</h3>
+      <p>General Surgeon specializing in minimally invasive procedures.</p>
+    </div>
+
+    <div class="card" style="width: 200px; text-align: center;">
+      <img src="https://images.pexels.com/photos/6129500/pexels-photo-6129500.jpeg?auto=format&fit=crop&w=800&q=80" alt="Dr. Henok Asfaw" style="width: 100%; border-radius: 12px;">
+      <h3>Dr. Henok Asfaw</h3>
+      <p>Orthopedic Surgeon focused on bone and joint care.</p>
+    </div>
+  </div>
+
+  <!-- Button to Find Other Medical Team -->
+  <div style="text-align:center; margin-top:30px;">
+    <a href="#more-doctors" style="padding:12px 24px; background-color:#007BFF; color:white; text-decoration:none; font-weight:bold; border-radius:8px;">
+      Find Other Medical Team
+    </a>
+  </div>
+</section>
+<video autoplay muted loop playsinline controls style="width: 100%; height: auto; max-width: 100%;">
+  <source src="https://media.istockphoto.com/id/1632593384/video/hospital-bed-senior-patient-and-nurse-talk-with-night-check-and-healthcare-monitor-in-icu.mp4?s=mp4-640x640-is&k=20&c=0qMTKlQndPSCA_2x9Gw82IMvDmMydJSxo0SGvs0TAZg=" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+<footer>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto;">
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h4>Patients</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="#" style="color:white;">Find A Doctor</a></li>
+        <li><a href="#" style="color:white;">Insurance Assistance</a></li>
+        <li><a href="#" style="color:white;">Patient Portal</a></li>
+        <li><a href="#" style="color:white;">Pay My Bill</a></li>
+      </ul>
+    </div>
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h4>Quick Links</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="#" style="color:white;">Services</a></li>
+        <li><a href="#" style="color:white;">Labs</a></li>
+        <li><a href="#" style="color:white;">Locations</a></li>
+        <li><a href="#" style="color:white;">Careers</a></li>
+        <li><a href="#" style="color:white;">Wellness on Wheels</a></li>
+      </ul>
+    </div>
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h4>Contact</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="#" style="color:white;">Contact Us</a></li>
+        <li><span>Call: +251 934 397418</span></li>
+        <li><span>Email: info@dmgh.org</span></li>
+      </ul>
+    </div>
+    <div style="flex: 1; min-width: 200px; margin-bottom: 20px;">
+      <h4>Follow Us</h4>
+      <div style="display: flex; gap: 10px;">
+        <a href="https://facebook.com" target="_blank" style="color:white;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" style="color:white;"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank" style="color:white;"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank" style="color:white;"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center; margin-top: 30px;">
+    <p>&copy; 2025 Debre Markos General Hospital. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('showBookForm').addEventListener('click', function(e) {
+    e.preventDefault();
+    const bookSection = document.getElementById('book');
+    bookSection.style.display = 'block';
+    bookSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  function validateForm() {
+    const name = document.getElementById("patientName").value.trim();
+    const email = document.getElementById("patientEmail").value.trim();
+    const phone = document.getElementById("patientPhone").value.trim();
+    const doctor = document.getElementById("doctor").value;
+
+    if (!name || !email || !phone || !doctor) {
+      alert("Please fill in all fields.");
+      return false;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      alert("Enter a valid email.");
+      return false;
+    }
+
+    if (!/^\+?\d{9,15}$/.test(phone)) {
+      alert("Enter a valid phone number.");
+      return false;
+    }
+
+    alert("Appointment request sent successfully!");
+    return true;
+  }
+
+  const toggleButton = document.getElementById('toggleAmbulanceForm');
+  const ambulanceFormSection = document.getElementById('ambulanceFormSection');
+
+  toggleButton.addEventListener('click', () => {
+    if (ambulanceFormSection.style.display === 'block') {
+      ambulanceFormSection.style.display = 'none';
+      toggleButton.textContent = 'Ambulance Support';
+    } else {
+      ambulanceFormSection.style.display = 'block';
+      toggleButton.textContent = 'Hide Ambulance Form';
+      ambulanceFormSection.scrollIntoView({behavior: 'smooth'});
+    }
+  });
+
+  document.getElementById('ambulanceForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('ambName').value.trim();
+    const phone = document.getElementById('ambPhone').value.trim();
+    const kebele = document.getElementById('ambKebele').value.trim();
+    const sefer = document.getElementById('ambSefer').valuSSe.trim();
+    const location = document.getElementById('ambLocation').value.trim();
+
+    if (!name || !phone || !kebele || !sefer || !location) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    const phoneRegex = /^[0-9+]{9,15}$/;
+    if (!phoneRegex.test(phone)) {
+      alert('Please enter a valid phone number.');
+      return;
+    }
+
+    alert('Ambulance request submitted successfully!');
+    this.reset();
+    ambulanceFormSection.style.display = 'none';
+    toggleButton.textContent = 'Ambulance Support';
+  });
+<!-- </script> -->
+</body>
+</html>
